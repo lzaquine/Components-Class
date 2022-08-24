@@ -16,15 +16,15 @@ function BeerModal({ isOpen, onClose, name, tagline, description }) {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Name: {/* name */}</ModalHeader>
+          <ModalHeader>Name: { name }</ModalHeader>
           <ModalCloseButton onClick={onClose} />
           <ModalBody>
             <Text>
-              <b>Tagline:</b> {/* tagline */}
+              <b>Tagline:</b> { tagline }
             </Text>
             <Text>
               {" "}
-              <b>Description:</b> {/* description */}
+              <b>Description:</b> { description }
             </Text>
           </ModalBody>
 

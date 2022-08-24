@@ -1,5 +1,11 @@
+import BeerList from "./components/BeerList";
+
+
 function App() {
-  return <></>;
+  return <>
+    <BeerList />
+
+  </>;
 }
 
 export default App;

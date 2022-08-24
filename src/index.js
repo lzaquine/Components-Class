@@ -6,6 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import "react-toastify/dist/ReactToastify.css";
+import GlobalStyle  from "./styles/GlobalStyles";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  color: {
+    primary: "#6419E6",
+    neutral: "#2a303c",
+    base: "#191d24",
+  }
+}
 
 const config = {
   initialColorMode: "dark",
@@ -16,11 +26,14 @@ const chakraTheme = extendTheme({ config });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+
     <ChakraProvider theme={chakraTheme}>
+      <ThemeProvider theme={theme}>
+    <GlobalStyle />
       <App />
+      </ThemeProvider>
     </ChakraProvider>
-  </React.StrictMode>
+
 );
 
 reportWebVitals();
